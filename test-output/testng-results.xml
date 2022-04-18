@@ -1,21 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-13T12:54:43 IST" name="Default suite" finished-at="2022-04-13T12:54:56 IST" duration-ms="12828">
+  <suite started-at="2022-04-17T23:27:12 IST" name="Default suite" finished-at="2022-04-17T23:27:21 IST" duration-ms="9198">
     <groups>
     </groups>
-    <test started-at="2022-04-13T12:54:43 IST" name="Default test" finished-at="2022-04-13T12:54:56 IST" duration-ms="12828">
-      <class name="Testcases.verifySignUp">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testcases.verifySignUp@505fc5a4]" started-at="2022-04-13T12:54:44 IST" name="launchBrowser" finished-at="2022-04-13T12:54:49 IST" duration-ms="5275" status="PASS">
+    <test started-at="2022-04-17T23:27:12 IST" name="Default test" finished-at="2022-04-17T23:27:21 IST" duration-ms="9198">
+      <class name="Testcases.VerifySignIn">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testcases.VerifySignIn@6fd83fc1]" started-at="2022-04-17T23:27:12 IST" name="launchBrowser" finished-at="2022-04-17T23:27:16 IST" duration-ms="4059" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="signUp()[pri:0, instance:Testcases.verifySignUp@505fc5a4]" started-at="2022-04-13T12:54:49 IST" name="signUp" finished-at="2022-04-13T12:54:56 IST" duration-ms="7501" status="PASS">
+        <test-method signature="enterCredentials(java.lang.String,java.lang.String)[pri:0, instance:Testcases.VerifySignIn@6fd83fc1]" started-at="2022-04-17T23:27:16 IST" name="enterCredentials" data-provider="demo" finished-at="2022-04-17T23:27:17 IST" duration-ms="916" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test1@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Secure@123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signUp -->
-      </class> <!-- Testcases.verifySignUp -->
+        </test-method> <!-- enterCredentials -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testcases.VerifySignIn@6fd83fc1]" started-at="2022-04-17T23:27:17 IST" name="launchBrowser" finished-at="2022-04-17T23:27:20 IST" duration-ms="2845" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="enterCredentials(java.lang.String,java.lang.String)[pri:0, instance:Testcases.VerifySignIn@6fd83fc1]" started-at="2022-04-17T23:27:20 IST" name="enterCredentials" data-provider="demo" finished-at="2022-04-17T23:27:21 IST" duration-ms="1073" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test1@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Secure@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterCredentials -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:Testcases.VerifySignIn@6fd83fc1]" started-at="2022-04-17T23:27:21 IST" name="quitBrowser" finished-at="2022-04-17T23:27:21 IST" duration-ms="256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- Testcases.VerifySignIn -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

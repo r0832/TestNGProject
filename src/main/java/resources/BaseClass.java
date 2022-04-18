@@ -7,19 +7,23 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 
 	public WebDriver driver;
+	public Properties prop;
 
 	public WebDriver initilizeDriver() throws IOException {
 		// To read properties file
 
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + 	"\\src\\main\\java\\resources\\data.properties");
 
-		Properties prop = new Properties();
+	 prop = new Properties();
 		prop.load(fis);
 
 		// load Browser from properties file
@@ -29,8 +33,8 @@ public class BaseClass {
 		// Choosing browser from Data.Properties file
 
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					"C:\\\\Users\\\\Admin\\\\Desktop\\\\Selenium\\\\Chrome Driver\\\\chromedriver.exe");
+			  // WebDriverManager.chromedriver().browserVersion("79.0.9").setup(); //To run  specific chrome driver 			
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} 
 		else if (browserName.equals("firefox")) {
@@ -56,8 +60,13 @@ public class BaseClass {
 	public void launchBrowser() throws IOException {
 
 		driver = initilizeDriver();
-		driver.get("https://login.salesforce.com/?locale=in");
+		driver.get(prop.getProperty("url"));
 
 	}
+	
+	 @AfterClass
+	 public void quitBrowser() throws IOException {
+	  driver.quit();
+	 }
 
 }
